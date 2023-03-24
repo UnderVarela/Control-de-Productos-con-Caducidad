@@ -20,4 +20,16 @@ document.querySelector('#product-form').addEventListener('submit', e => {
   const precioEl = form.price
   const p = new Producto(nombreEl.value, Number(precioEl.value))
   productos.push(p)
+
+  // Total
+  let total = 0
+  for (const producto of productos) {
+    total = total + producto.precio // otra opcion total += producto.precio
+  }
+
+  // lo mismo usando reduce
+  // const total = productos.reduce((acumulador, productoCurrent) => {
+  //   return productoCurrent.precio + acumulador
+  // }, 0)
+
 })
