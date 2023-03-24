@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <title>Perecedero NoPerecedero</title>
+</head>
+<body class="cuerpo">
+    <header class="cabecera_principal">
+        <h1>Control de Productos</h1>
+    </header>
+    <main class="principal">
+        <form id="formulario">
+            <fieldset>
+                <legend>Registro Producto</legend>
+                <ol class="campos">
+                    <li class="campo">
+                        <label for="nombre"><input name="nombre" type="text" id="nombre" placeholder="Nombre del producto"></label>
+                        <strong>Sólo valores alfanuméricos</strong>
+                    </li>
+                    <li class="campo">
+                        <label for="precio"><input name="precio" type="text" id="precio" placeholder="Precio del producto"></label>
+                        <strong>Formato correcto: <span>13€ o 13.5€</span></strong>
+                    </li>
+                    <li>
+                        <select name="select">
+                            <option value="" disabled selected>Dias para caducar</option>
+                            <option value="value1">1</option>
+                            <option value="value2">2</option>
+                            <option value="value3">3</option>
+                          </select>
+                    </li>
+                </ol>
+                <input id="cargar" type="submit" value="Añadir">
+            </fieldset>
+        </form>
+        <section class="inventario">
+            <h2>Inventario</h2>
+            <table class="tabla_inventario">
+                <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                    </tr>                    
+                </thead>
+                <tbody id="tbody">
+                    <!-- tus tr aquí -->
+                </tbody>            
+                <tfoot>
+                    <tr>
+                        <th id="total" colspan="2">PRECIO TOTAL: </th>
+                        <th colspan="2">No incluye I.V.A</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
